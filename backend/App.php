@@ -6,6 +6,7 @@ Route::get('/reset-log', function () {
     return ['status' => 'success', 'message' => 'Log as been reset'];
 });
 Route::get('/reset', function () {
+    ResetLog::reset();
     Seeder::run();
     return ['status' => 'success', 'message' => 'Database has been reset'];
 });

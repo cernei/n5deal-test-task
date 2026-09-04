@@ -3,7 +3,8 @@
 class ResetLog {
     public static function reset(): void
     {
-        Db::statement('CREATE TABLE IF NOT EXISTS sessions (
+        Db::statement('DROP TABLE IF EXISTS `sessions`;');
+        Db::statement('CREATE TABLE sessions (
             id VARCHAR(255) NOT NULL PRIMARY KEY,
             user_id BIGINT NULL,
             ip_address VARCHAR(45) NULL,
