@@ -29,7 +29,7 @@ export default function Header() {
   const handleLogout = () => {
     localStorage.removeItem('user');
     window.dispatchEvent(new Event('user-updated'));
-    router.push('/logout');
+    router.replace('/');
   };
   const sellerBlock = (
     <>
